@@ -10,7 +10,7 @@
 #define RED "\x1B[1;91m"
 #define NORM "\x1B[0;0m"
 
-#define QUIT 0
+#define CLEAR() (system("clear"))
 #define EQSIGNS "============================================================="
 
 /* runtime strings */
@@ -20,7 +20,6 @@
 #define OPT12 "Enter the time. The time may be specified\nin the format  2015-08-01 09:12:45"
 #define PRESS_ENTER "\n    Press \"Enter\" to continue"
 #define DONE "    Done."
-#define CLEAR() (system("clear"))
 #define BAD_HAPPENS "Something went wrong, exiting !!!"
 
 /* draw_menu strings */

@@ -63,7 +63,7 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
 /* setting timezone and time */
 void ask_n_run_cmd(const char *str1, const char *str2)
 {
-  char typed[100], exec_str[100];
+  char typed[100], exec_str[200];
 
   printf("%s ", str2);
 
@@ -71,7 +71,7 @@ void ask_n_run_cmd(const char *str1, const char *str2)
     puts(BAD_HAPPENS);
     exit(EXIT_FAILURE);
   }
-  snprintf(exec_str, 99, "%s \"%s\"", str1, typed);
+  snprintf(exec_str, 199, "%s \"%s\"", str1, typed);
 
   CLEAR();
   system(exec_str);
