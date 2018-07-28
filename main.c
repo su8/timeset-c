@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
      used the command line options
   */
   if (argc > 1) {
-    exit(EXIT_SUCCESS);
+    return EXIT_SUCCESS;
   }
 
   /*
@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
       case 11: non_interactive(11, CMD11, DONE);     break;
       case 12: ask_n_run_cmd(CMD12, OPT12);
         if (EOF == scanf("%*s")) {
-          printf("%s\n", BAD_HAPPENS);
+          puts(BAD_HAPPENS);
           exit(EXIT_FAILURE);
         }
         break;
