@@ -4,7 +4,7 @@ LDFLAGS=
 BINDIR=/usr/bin
 CFILES=$(wildcard *.c)
 OBJ_CODE=$(CFILES:.c=.o)
-INZTALL=/usr/bin/install -Dm -c
+INZTALL=/usr/bin/install -D -s -m 755 -c
 
 .PHONY: all uninstall install
 
