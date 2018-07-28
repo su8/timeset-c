@@ -18,15 +18,15 @@ static struct argp_option options[] =
 
 static error_t parse_opt(int key, char *arg, struct argp_state *state)
 {
+  (void)arg;
+  (void)state;
+
   switch(key)
   {
-      case 's': non_interactive(1, CMD1, PRESS_ENTER);
-            break;
-      case 't': non_interactive(2, CMD2, DONE);
-            break;
-        case 'r': non_interactive(9, CMD9, PRESS_ENTER);
-            break;
-      default: return ARGP_ERR_UNKNOWN;
+    case 's': non_interactive(1, CMD1, PRESS_ENTER);   break;
+    case 't': non_interactive(2, CMD2, DONE);          break;
+    case 'r': non_interactive(9, CMD9, PRESS_ENTER);   break;
+    default: return ARGP_ERR_UNKNOWN;
   }
   return EXIT_SUCCESS;
 }

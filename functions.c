@@ -9,7 +9,7 @@
 */
 int run_menu(void)
 {
-  short int input = -2;
+  int input = -2;
   static const char draw_menu[] =
   {
     "    "GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n\n"
@@ -46,7 +46,7 @@ int run_menu(void)
    doesn't require user interaction, nor
    change anything to the system date and/or time
 */
-void non_interactive(const unsigned short int x, const char *exec_str, const char *print_str)
+void non_interactive(const int x, const char *exec_str, const char *print_str)
 {
     CLEAR();
     system(exec_str);
