@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
   */
   if (0 != (geteuid()))
   {
-    printf("%s\n", "You are not a root user, exiting.");
+    puts("You are not a root user, exiting.");
     exit(EXIT_FAILURE);
   }
 

@@ -65,7 +65,7 @@ void ask_n_run_cmd(const char *str1, const char *str2)
 {
   char typed[100], exec_str[200];
 
-  printf("%s ", str2);
+  puts(str2);
 
   if (EOF == (scanf("%s", typed))) {
     puts(BAD_HAPPENS);
