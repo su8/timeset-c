@@ -1,10 +1,10 @@
 CC=gcc
-CFLAGS=-Wall -Wextra -O2 -std=c99 -pipe -pedantic -Wundef -Wshadow -W -Wwrite-strings -Wcast-align -Wstrict-overflow=5 -Wconversion -Wpointer-arith -Wstrict-prototypes -Wformat=2 -Wsign-compare -Wendif-labels -Wredundant-decls
+CFLAGS=-Wall -Wextra -O2 -std=c99 -pipe -pedantic -Wundef -Wshadow -W -Wwrite-strings -Wcast-align -Wstrict-overflow=5 -Wconversion -Wpointer-arith -Wstrict-prototypes -Wformat=2 -Wsign-compare -Wendif-labels -Wredundant-decls -Winit-self
 LDFLAGS=
 BINDIR=/usr/bin
 CFILES=$(wildcard *.c)
 OBJ_CODE=$(CFILES:.c=.o)
-INZTALL=/usr/bin/install -c
+INZTALL=/usr/bin/install -Dm -c
 
 .PHONY: all uninstall install
 

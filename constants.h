@@ -42,16 +42,16 @@
 /* commands to execute */
 #define CMD1 "timedatectl status"
 #define CMD2 "timedatectl list-timezones"
-#define CMD3 "timedatectl set-timezone \"%s\""
+#define CMD3 "timedatectl set-timezone"
 #define CMD4 "ntpdate -u 0.pool.ntp.org"
-#define CMD5 "timedatectl set-ntp %d"
+#define CMD5 "timedatectl set-ntp"
 #define CMD6 "systemctl disable ntpd"
 #define CMD7 "systemctl enable ntpd"
-#define CMD8 "timedatectl set-local-rtc %d"
+#define CMD8 "timedatectl set-local-rtc"
 #define CMD9 "hwclock -D"
 #define CMD10 "hwclock -w"
 #define CMD11 "hwclock -s"
-#define CMD12 "timedatectl set-time \"%s\""
+#define CMD12 "timedatectl set-time"
 
 
 /* prototype the functions */
