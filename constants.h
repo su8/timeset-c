@@ -55,6 +55,7 @@
 /* prototype the functions */
 int run_menu(void);
 void non_interactive(const int , const char *, const char *);
+void non_interactive2(const char *);
 void ask_n_run_cmd(const char *, const char *);
 void ask_zero_or_one(const char *, const char *);
 

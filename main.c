@@ -22,9 +22,9 @@ static error_t parse_opt(int key, char *arg, struct argp_state *state)
 
   switch(key)
   {
-    case 's': non_interactive(1, CMD1, PRESS_ENTER);   break;
-    case 't': non_interactive(2, CMD2, DONE);          break;
-    case 'r': non_interactive(9, CMD9, PRESS_ENTER);   break;
+    case 's': non_interactive2(CMD1);   break;
+    case 't': non_interactive2(CMD2);   break;
+    case 'r': non_interactive2(CMD9);   break;
     default: return ARGP_ERR_UNKNOWN;
   }
   return EXIT_SUCCESS;

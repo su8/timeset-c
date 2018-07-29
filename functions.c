@@ -58,6 +58,12 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
   return;
 }
 
+void non_interactive2(const char *exec_str) {
+  system(exec_str);
+
+  return;
+}
+
 /* setting timezone and time */
 void ask_n_run_cmd(const char *str1, const char *str2)
 {
