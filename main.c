@@ -5,7 +5,7 @@
 #include "constants.h"
 
 static const char doc[] = "TimeSet - Manage System Date and Time.\vMandatory arguments to long options are mandatory for short options too.\n";
-const char *argp_program_version = "timeset 1.0.4";
+const char *argp_program_version = "timeset 1.0.5";
 static struct argp_option options[] =
 {
   { .doc = "" },
