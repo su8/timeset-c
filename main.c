@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
         break;
     }
   }
-  printf("%s\n%s%s\n\n", RED, "See you later.", NORM);
+  puts("See you later.");
 
   return EXIT_SUCCESS;
 }

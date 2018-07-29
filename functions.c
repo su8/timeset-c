@@ -25,7 +25,7 @@ int run_menu(void)
     BLUE"["YELLOW"10"BLUE"]"NORM" "MENU_OPT10"\n"
     BLUE"["YELLOW"11"BLUE"]"NORM" "MENU_OPT11"\n"
     BLUE"["YELLOW"12"BLUE"]"NORM" "MENU_OPT12"\n"
-    BLUE"["YELLOW"0"BLUE"]"RED"  "MENU_OPT0"\n"
+    BLUE"["YELLOW"0"BLUE"]"NORM"  "MENU_OPT0"\n"
     GREEN""EQSIGNS"\n\n"NORM""
     "Enter your choice:"" "
   };
