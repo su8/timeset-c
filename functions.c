@@ -50,6 +50,11 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
 {
   system(exec_str);
 
+  puts(print_str);
+
+  if (1 == x || 9 == x) {
+    getchar();  /* hold on (press enter) was printed */
+  }
   return;
 }
 
