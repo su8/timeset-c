@@ -85,6 +85,9 @@ void ask_zero_or_one(const char *str1, const char *str2)
   char exec_str[40];
   int enter_status = -1, entered_val = -1;
 
+  if (0 == (strcmp(CMD8, str1))) {
+    system("timedatectl | grep local");
+  }
   puts(str2);
 
   while (1 != (enter_status = (scanf("%d", &entered_val))) ||
@@ -95,6 +98,9 @@ void ask_zero_or_one(const char *str1, const char *str2)
         puts(BAD_HAPPENS);
         exit(EXIT_FAILURE);
       }
+    }
+    if (0 == (strcmp(CMD8, str1))) {
+      system("timedatectl | grep local");
     }
     puts(str2);
   }
