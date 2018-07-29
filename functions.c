@@ -58,6 +58,7 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
   return;
 }
 
+/* The user used the command line options */
 void non_interactive2(const char *exec_str) {
   system(exec_str);
 
