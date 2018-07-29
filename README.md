@@ -1,4 +1,5 @@
-# timeset-c
-![](img1.png)
+Manage system date and time
 
-![](img2.png)
+![](picz/img1.png)
+
+![](picz/img2.png)
