@@ -52,7 +52,6 @@
 #define CMD11 "hwclock -s"
 #define CMD12 "timedatectl set-time"
 
-
 /* prototype the functions */
 int run_menu(void);
 void non_interactive(const int , const char *, const char *);

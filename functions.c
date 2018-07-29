@@ -9,10 +9,10 @@
 */
 int run_menu(void)
 {
-  int input = -2;
+  int input = -1;
   static const char draw_menu[] =
   {
-    "    "GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n\n"
+    "    "GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n"
     "    "BLUE"["YELLOW"1"BLUE"]"NORM"  "MENU_OPT1"\n"
     "    "BLUE"["YELLOW"2"BLUE"]"NORM"  "MENU_OPT2"\n"
     "    "BLUE"["YELLOW"3"BLUE"]"NORM"  "MENU_OPT3"\n"
@@ -87,10 +87,10 @@ void ask_zero_or_one(const char *str1, const char *str2)
 
   puts(str2);
 
-  while ((enter_status = (scanf("%d", &entered_val))) != 1
-      || (entered_val < 0 || entered_val > 1))
+  while (1 != (enter_status = (scanf("%d", &entered_val))) ||
+    (entered_val < 0 || entered_val > 1))
   {
-    if (enter_status != 1) {
+    if (1 != enter_status) {
       if (EOF == (scanf("%*s"))) {  /* skip bad input (chars) */
         puts(BAD_HAPPENS);
         exit(EXIT_FAILURE);
