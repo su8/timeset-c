@@ -86,7 +86,6 @@ int main(int argc, char *argv[])
         break;
     }
   }
-  puts("See you later.");
 
   return EXIT_SUCCESS;
 }
