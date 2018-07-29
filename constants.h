@@ -47,7 +47,7 @@
 #define CMD6 "systemctl disable ntpd"
 #define CMD7 "systemctl enable ntpd"
 #define CMD8 "timedatectl set-local-rtc"
-#define CMD9 "hwclock -D"
+#define CMD9 "hwclock --verbose"
 #define CMD10 "hwclock -w"
 #define CMD11 "hwclock -s"
 #define CMD12 "timedatectl set-time"
