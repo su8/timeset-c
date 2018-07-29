@@ -6,7 +6,6 @@
 
 static const char doc[] = "TimeSet - Manage System Date and Time.\vMandatory arguments to long options are mandatory for short options too.\n";
 const char *argp_program_version = "timeset 1.0.2";
-
 static struct argp_option options[] =
 {
   { .doc = "" },
@@ -39,7 +38,6 @@ int main(int argc, char *argv[])
     .options = options, 
     .parser = parse_opt
   };
-
   argp_parse(&arg_parser, argc, argv, 0, NULL, NULL);
 
   /* 

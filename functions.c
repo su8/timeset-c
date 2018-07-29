@@ -70,7 +70,6 @@ void ask_n_run_cmd(const char *str1, const char *str2)
     exit(EXIT_FAILURE);
   }
   snprintf(exec_str, 199, "%s \"%s\"", str1, typed);
-
   system(exec_str);
 
   puts(DONE);
@@ -100,7 +99,6 @@ void ask_zero_or_one(const char *str1, const char *str2)
     puts(str2);
   }
   snprintf(exec_str, 39, "%s %d", str1, entered_val);
-
   system(exec_str);
 
   puts(DONE);
