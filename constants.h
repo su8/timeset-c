@@ -18,8 +18,8 @@
 #define OPT5 "Please enter a value between 0 and 1:\n0 means disable NTP and 1 means enable NTP"
 #define OPT3 "Enter the timezone. It should be like \nContinent/City - Europe/Berlin"
 #define OPT12 "Enter the time. The time may be specified\nin the format  2015-08-01 09:12:45"
-#define PRESS_ENTER "\n    Press \"Enter\" to continue"
-#define DONE "    Done."
+#define PRESS_ENTER "\nPress \"Enter\" to continue"
+#define DONE "Done."
 #define BAD_HAPPENS "Something went wrong, exiting !!!"
 
 /* draw_menu strings */

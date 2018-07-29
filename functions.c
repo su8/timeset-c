@@ -12,22 +12,22 @@ int run_menu(void)
   int input = -1;
   static const char draw_menu[] =
   {
-    "    "GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n"
-    "    "BLUE"["YELLOW"1"BLUE"]"NORM"  "MENU_OPT1"\n"
-    "    "BLUE"["YELLOW"2"BLUE"]"NORM"  "MENU_OPT2"\n"
-    "    "BLUE"["YELLOW"3"BLUE"]"NORM"  "MENU_OPT3"\n"
-    "    "BLUE"["YELLOW"4"BLUE"]"NORM"  "MENU_OPT4"\n"
-    "    "BLUE"["YELLOW"5"BLUE"]"NORM"  "MENU_OPT5"\n"
-    "    "BLUE"["YELLOW"6"BLUE"]"NORM"  "MENU_OPT6"\n"
-    "    "BLUE"["YELLOW"7"BLUE"]"NORM"  "MENU_OPT7"\n"
-    "    "BLUE"["YELLOW"8"BLUE"]"NORM"  "MENU_OPT8"\n"
-    "    "BLUE"["YELLOW"9"BLUE"]"NORM"  "MENU_OPT9"\n"
-    "    "BLUE"["YELLOW"10"BLUE"]"NORM" "MENU_OPT10"\n"
-    "    "BLUE"["YELLOW"11"BLUE"]"NORM" "MENU_OPT11"\n"
-    "    "BLUE"["YELLOW"12"BLUE"]"NORM" "MENU_OPT12"\n"
-    "    "BLUE"["YELLOW"0"BLUE"]"RED"  "MENU_OPT0"\n"
-    "    "GREEN""EQSIGNS"\n\n"NORM""
-    "    ""Enter your choice:""  "
+    GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n"
+    BLUE"["YELLOW"1"BLUE"]"NORM"  "MENU_OPT1"\n"
+    BLUE"["YELLOW"2"BLUE"]"NORM"  "MENU_OPT2"\n"
+    BLUE"["YELLOW"3"BLUE"]"NORM"  "MENU_OPT3"\n"
+    BLUE"["YELLOW"4"BLUE"]"NORM"  "MENU_OPT4"\n"
+    BLUE"["YELLOW"5"BLUE"]"NORM"  "MENU_OPT5"\n"
+    BLUE"["YELLOW"6"BLUE"]"NORM"  "MENU_OPT6"\n"
+    BLUE"["YELLOW"7"BLUE"]"NORM"  "MENU_OPT7"\n"
+    BLUE"["YELLOW"8"BLUE"]"NORM"  "MENU_OPT8"\n"
+    BLUE"["YELLOW"9"BLUE"]"NORM"  "MENU_OPT9"\n"
+    BLUE"["YELLOW"10"BLUE"]"NORM" "MENU_OPT10"\n"
+    BLUE"["YELLOW"11"BLUE"]"NORM" "MENU_OPT11"\n"
+    BLUE"["YELLOW"12"BLUE"]"NORM" "MENU_OPT12"\n"
+    BLUE"["YELLOW"0"BLUE"]"RED"  "MENU_OPT0"\n"
+    GREEN""EQSIGNS"\n\n"NORM""
+    "Enter your choice:""  "
   };
 
   printf("%s", draw_menu);

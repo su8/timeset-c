@@ -82,11 +82,11 @@ int main(int argc, char *argv[])
         }
         break;
       default:
-        printf("%s\n    %s%s\n\n", RED, "Please choose a option between 0-12.", NORM);
+        printf("%s\n%s%s\n\n", RED, "Please choose a option between 0-12.", NORM);
         break;
     }
   }
-  printf("%s\n    %s%s\n\n", RED, "    See you later.\n", NORM);
+  printf("%s\n%s%s\n\n", RED, "See you later.", NORM);
 
   return EXIT_SUCCESS;
 }
