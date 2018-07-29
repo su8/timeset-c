@@ -10,7 +10,7 @@
 #define RED "\x1B[1;91m"
 #define NORM "\x1B[0;0m"
 
-#define CLEAR() (system("clear"))
+/* misc */
 #define EQSIGNS "============================================================="
 
 /* runtime strings */

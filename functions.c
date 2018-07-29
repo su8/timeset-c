@@ -48,16 +48,14 @@ int run_menu(void)
 */
 void non_interactive(const int x, const char *exec_str, const char *print_str)
 {
-    CLEAR();
-    system(exec_str);
+  system(exec_str);
 
-    puts(print_str);
+  puts(print_str);
 
-    if (1 == x || 9 == x) {
-      getchar();  /* hold on (press enter) was printed */
-    }
-
-    return;
+  if (1 == x || 9 == x) {
+    getchar();  /* hold on (press enter) was printed */
+  }
+  return;
 }
 
 /* setting timezone and time */
@@ -73,7 +71,6 @@ void ask_n_run_cmd(const char *str1, const char *str2)
   }
   snprintf(exec_str, 199, "%s \"%s\"", str1, typed);
 
-  CLEAR();
   system(exec_str);
 
   puts(DONE);
@@ -104,7 +101,6 @@ void ask_zero_or_one(const char *str1, const char *str2)
   }
   snprintf(exec_str, 39, "%s %d", str1, entered_val);
 
-  CLEAR();
   system(exec_str);
 
   puts(DONE);

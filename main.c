@@ -5,7 +5,7 @@
 #include "constants.h"
 
 static const char doc[] = "TimeSet - Manage System Date and Time.\vMandatory arguments to long options are mandatory for short options too.\n";
-const char *argp_program_version = "timeset 1.0.1";
+const char *argp_program_version = "timeset 1.0.2";
 
 static struct argp_option options[] =
 {
@@ -64,6 +64,7 @@ int main(int argc, char *argv[])
 
   while (0 != (return_val = run_menu()))
   {
+    system("clear");
     switch(return_val)
     {
       case 1: non_interactive(1, CMD1, PRESS_ENTER); break;
@@ -78,13 +79,13 @@ int main(int argc, char *argv[])
       case 10: non_interactive(10, CMD10, DONE);     break;
       case 11: non_interactive(11, CMD11, DONE);     break;
       case 12: ask_n_run_cmd(CMD12, OPT12);
-        if (EOF == scanf("%*s")) {
+        if (EOF == (scanf("%*s"))) {
           puts(BAD_HAPPENS);
           exit(EXIT_FAILURE);
         }
         break;
       default:
-        CLEAR();
+        printf("%s\n    %s%s\n\n", RED, "Please choose a option between 0-12.", NORM);
         break;
     }
   }
