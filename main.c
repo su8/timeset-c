@@ -5,7 +5,7 @@
 #include "constants.h"
 
 static const char doc[] = "TimeSet - Manage System Date and Time.\vMandatory arguments to long options are mandatory for short options too.\n";
-const char *argp_program_version = "timeset 1.0.2";
+const char *argp_program_version = "timeset 1.0.3";
 static struct argp_option options[] =
 {
   { .doc = "" },
@@ -56,9 +56,8 @@ int main(int argc, char *argv[])
   if (0 != (geteuid()))
   {
     puts("You are not a root user, exiting.");
-    exit(EXIT_FAILURE);
+    return EXIT_FAILURE;
   }
-
 
   while (0 != (return_val = run_menu()))
   {
@@ -87,7 +86,7 @@ int main(int argc, char *argv[])
         break;
     }
   }
-  printf("%s\n    %s%s\n\n", RED, "    See you later.\n", NORM);
 
+  printf("%s\n    %s%s\n\n", RED, "    See you later.\n", NORM);
   return EXIT_SUCCESS;
 }
