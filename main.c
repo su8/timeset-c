@@ -44,7 +44,8 @@ int main(int argc, char *argv[])
      Do not continue if the user has
      used the command line options
   */
-  if (argc > 1) {
+  if (argc > 1)
+  {
     return EXIT_SUCCESS;
   }
 
@@ -59,7 +60,7 @@ int main(int argc, char *argv[])
     return EXIT_FAILURE;
   }
 
-  while (0 != (return_val = run_menu()))
+  while (0 != (return_val = draw_menu()))
   {
     system("clear");
     switch(return_val)
@@ -76,7 +77,8 @@ int main(int argc, char *argv[])
       case 10: non_interactive(10, CMD10, DONE);     break;
       case 11: non_interactive(11, CMD11, DONE);     break;
       case 12: ask_n_run_cmd(CMD12, OPT12);
-        if (EOF == (scanf("%*s"))) {
+        if (EOF == (scanf("%*s")))
+        {
           puts(BAD_HAPPENS);
           exit(EXIT_FAILURE);
         }

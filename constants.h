@@ -12,11 +12,13 @@
 
 /* misc */
 #define STREQ(STR1, STR2) (0 == (strcmp(STR1, STR2)))
+#define MENU_ROW(NUM, OPT) BLUE "[" YELLOW NUM BLUE "]" NORM "  " OPT "\n"
 #define EQSIGNS "============================================================="
 
 /* runtime strings */
-#define OPT8 "Please enter a value between 0 and 1:\n0 means Hardware clock to UTC\nand 1 means set it to Local time"
-#define OPT5 "Please enter a value between 0 and 1:\n0 means disable NTP and 1 means enable NTP"
+#define PLEASE_ENTER "Please enter a value between 0 and 1:\n0 means"
+#define OPT8 PLEASE_ENTER " Hardware clock to UTC\nand 1 means set it to Local time"
+#define OPT5 PLEASE_ENTER " disable NTP and 1 means enable NTP"
 #define OPT3 "Enter the timezone. It should be like \nContinent/City - Europe/Berlin"
 #define OPT12 "Enter the time. The time may be specified\nin the format  2018-08-01 09:12:45"
 #define PRESS_ENTER "\nPress \"Enter\" to continue"
@@ -52,9 +54,10 @@
 #define CMD10 "hwclock -w"
 #define CMD11 "hwclock -s"
 #define CMD12 "timedatectl set-time"
+#define TDCTL_LOCAL "timedatectl | grep local"
 
 /* prototype the functions */
-int run_menu(void);
+int draw_menu(void);
 void non_interactive(const int , const char *, const char *);
 void non_interactive2(const char *);
 void ask_n_run_cmd(const char *, const char *);

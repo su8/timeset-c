@@ -7,32 +7,33 @@
    print/draw the menu and return 
    the user option choice back to main.c
 */
-int run_menu(void)
+int draw_menu(void)
 {
   int input = -1;
   static const char draw_menu[] =
   {
     GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n"
-    BLUE"["YELLOW"1"BLUE"]"NORM"  "MENU_OPT1"\n"
-    BLUE"["YELLOW"2"BLUE"]"NORM"  "MENU_OPT2"\n"
-    BLUE"["YELLOW"3"BLUE"]"NORM"  "MENU_OPT3"\n"
-    BLUE"["YELLOW"4"BLUE"]"NORM"  "MENU_OPT4"\n"
-    BLUE"["YELLOW"5"BLUE"]"NORM"  "MENU_OPT5"\n"
-    BLUE"["YELLOW"6"BLUE"]"NORM"  "MENU_OPT6"\n"
-    BLUE"["YELLOW"7"BLUE"]"NORM"  "MENU_OPT7"\n"
-    BLUE"["YELLOW"8"BLUE"]"NORM"  "MENU_OPT8"\n"
-    BLUE"["YELLOW"9"BLUE"]"NORM"  "MENU_OPT9"\n"
-    BLUE"["YELLOW"10"BLUE"]"NORM" "MENU_OPT10"\n"
-    BLUE"["YELLOW"11"BLUE"]"NORM" "MENU_OPT11"\n"
-    BLUE"["YELLOW"12"BLUE"]"NORM" "MENU_OPT12"\n"
-    BLUE"["YELLOW"0"BLUE"]"NORM"  "MENU_OPT0"\n"
+    MENU_ROW("1",  MENU_OPT1)
+    MENU_ROW("2",  MENU_OPT2)
+    MENU_ROW("3",  MENU_OPT3)
+    MENU_ROW("4",  MENU_OPT4)
+    MENU_ROW("5",  MENU_OPT5)
+    MENU_ROW("6",  MENU_OPT6)
+    MENU_ROW("7",  MENU_OPT7)
+    MENU_ROW("8",  MENU_OPT8)
+    MENU_ROW("9",  MENU_OPT9)
+    MENU_ROW("10", MENU_OPT10)
+    MENU_ROW("11", MENU_OPT11)
+    MENU_ROW("12", MENU_OPT12)
+    MENU_ROW("0",  MENU_OPT0)
     GREEN""EQSIGNS"\n\n"NORM""
     "Enter your choice:"" "
   };
 
   printf("%s", draw_menu);
   
-  if (EOF == (scanf("%d", &input))) {
+  if (EOF == (scanf("%d", &input)))
+  {
     puts(BAD_HAPPENS);
     exit(EXIT_FAILURE);
   }
@@ -52,7 +53,8 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
 
   puts(print_str);
 
-  if (1 == x || 9 == x) {
+  if (1 == x || 9 == x)
+  {
     getchar();  /* hold on (press enter) was printed */
   }
   return;
@@ -72,7 +74,8 @@ void ask_n_run_cmd(const char *str1, const char *str2)
 
   puts(str2);
 
-  if (EOF == (scanf("%s", typed))) {
+  if (EOF == (scanf("%s", typed)))
+  {
     puts(BAD_HAPPENS);
     exit(EXIT_FAILURE);
   }
@@ -92,22 +95,26 @@ void ask_zero_or_one(const char *str1, const char *str2)
   char exec_str[40];
   int enter_status = -1, entered_val = -1;
 
-  if (STREQ(CMD8, str1)) {
-    system("timedatectl | grep local");
+  if (STREQ(CMD8, str1))
+  {
+    system(TDCTL_LOCAL);
   }
   puts(str2);
 
   while (1 != (enter_status = (scanf("%d", &entered_val))) ||
     (entered_val < 0 || entered_val > 1))
   {
-    if (1 != enter_status) {
-      if (EOF == (scanf("%*s"))) {  /* skip bad input (chars) */
+    if (1 != enter_status)
+    {
+      if (EOF == (scanf("%*s")))
+      {  /* skip bad input (chars) */
         puts(BAD_HAPPENS);
         exit(EXIT_FAILURE);
       }
     }
-    if (STREQ(CMD8, str1)) {
-      system("timedatectl | grep local");
+    if (STREQ(CMD8, str1))
+    {
+      system(TDCTL_LOCAL);
     }
     puts(str2);
   }
