@@ -43,7 +43,7 @@
 #define CMD1 "timedatectl status"
 #define CMD2 "timedatectl list-timezones"
 #define CMD3 "timedatectl set-timezone"
-#define CMD4 "ntpdate -u 0.pool.ntp.org"
+#define CMD4 "ntpd"
 #define CMD5 "timedatectl set-ntp"
 #define CMD6 "systemctl disable ntpd"
 #define CMD7 "systemctl enable ntpd"
