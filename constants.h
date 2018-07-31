@@ -32,7 +32,6 @@
 /* misc */
 #define STREQ(STR1, STR2) (0 == (strcmp(STR1, STR2)))
 #define MENU_ROW(NUM, OPT) BLUE "[" YELLOW NUM BLUE "]" NORM "  " OPT "\n"
-#define SYSTEM_TDCTL() if (STREQ(CMD8, str1)) system("timedatectl | grep local");
 #define EXIT_BAD() \
   puts("Something went wrong, exiting !!!"); \
   exit(EXIT_FAILURE);
@@ -77,6 +76,9 @@
 #define CMD10 "hwclock -w"
 #define CMD11 "hwclock -s"
 #define CMD12 "timedatectl set-time"
+
+/* misc2 */
+#define SYSTEM_TDCTL() if (STREQ(CMD8, str1)) system("timedatectl | grep local");
 
 /* prototype the functions */
 int draw_menu(void);
