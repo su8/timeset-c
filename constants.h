@@ -32,6 +32,11 @@
 /* misc */
 #define STREQ(STR1, STR2) (0 == (strcmp(STR1, STR2)))
 #define MENU_ROW(NUM, OPT) BLUE "[" YELLOW NUM BLUE "]" NORM "  " OPT "\n"
+#define SYSTEM_TDCTL() if (STREQ(CMD8, str1)) system("timedatectl | grep local");
+#define EXIT_BAD() \
+  puts("Something went wrong, exiting !!!"); \
+  exit(EXIT_FAILURE);
+
 #define EQSIGNS "============================================================="
 
 /* runtime strings */
@@ -42,7 +47,6 @@
 #define OPT12 "Enter the time. The time may be specified\nin the format  2018-08-01 09:12:45"
 #define PRESS_ENTER "\nPress \"Enter\" to continue"
 #define DONE "Done."
-#define BAD_HAPPENS "Something went wrong, exiting !!!"
 
 /* draw_menu strings */
 #define PROGRAM_TITLE "TimeSet(tings) - Configure the System Date and Time"
@@ -73,7 +77,6 @@
 #define CMD10 "hwclock -w"
 #define CMD11 "hwclock -s"
 #define CMD12 "timedatectl set-time"
-#define TDCTL_LOCAL "timedatectl | grep local"
 
 /* prototype the functions */
 int draw_menu(void);

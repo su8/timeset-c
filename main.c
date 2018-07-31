@@ -98,8 +98,7 @@ int main(int argc, char *argv[])
       case 12: ask_n_run_cmd(CMD12, OPT12);
         if (EOF == (scanf("%*s")))
         {
-          puts(BAD_HAPPENS);
-          exit(EXIT_FAILURE);
+          EXIT_BAD();
         }
         break;
       default:

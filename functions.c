@@ -53,8 +53,7 @@ int draw_menu(void)
   
   if (EOF == (scanf("%d", &input)))
   {
-    puts(BAD_HAPPENS);
-    exit(EXIT_FAILURE);
+    EXIT_BAD();
   }
   getchar();  /* dispose the newline char */
 
@@ -95,8 +94,7 @@ void ask_n_run_cmd(const char *str1, const char *str2)
 
   if (EOF == (scanf("%s", typed)))
   {
-    puts(BAD_HAPPENS);
-    exit(EXIT_FAILURE);
+    EXIT_BAD();
   }
   snprintf(exec_str, 199, "%s \"%s\"", str1, typed);
   system(exec_str);
@@ -114,10 +112,7 @@ void ask_zero_or_one(const char *str1, const char *str2)
   char exec_str[40];
   int enter_status = -1, entered_val = -1;
 
-  if (STREQ(CMD8, str1))
-  {
-    system(TDCTL_LOCAL);
-  }
+  SYSTEM_TDCTL();
   puts(str2);
 
   while (1 != (enter_status = (scanf("%d", &entered_val))) ||
@@ -125,16 +120,12 @@ void ask_zero_or_one(const char *str1, const char *str2)
   {
     if (1 != enter_status)
     {
-      if (EOF == (scanf("%*s")))
-      {  /* skip bad input (chars) */
-        puts(BAD_HAPPENS);
-        exit(EXIT_FAILURE);
+      if (EOF == (scanf("%*s"))) /* skip bad input (chars) */
+      {
+        EXIT_BAD();
       }
     }
-    if (STREQ(CMD8, str1))
-    {
-      system(TDCTL_LOCAL);
-    }
+    SYSTEM_TDCTL();
     puts(str2);
   }
   snprintf(exec_str, 39, "%s %d", str1, entered_val);
