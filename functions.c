@@ -69,7 +69,10 @@ void non_interactive(const int x, const char *exec_str, const char *print_str)
 {
   system(exec_str);
 
-  puts(print_str);
+  if (!puts(print_str))
+  {
+    EXIT_BAD();
+  }
 
   if (1 == x || 9 == x)
   {
@@ -90,7 +93,10 @@ void ask_n_run_cmd(const char *str1, const char *str2)
 {
   char typed[100], exec_str[200];
 
-  puts(str2);
+  if (!puts(str2))
+  {
+    EXIT_BAD();
+  }
 
   if (EOF == (scanf("%s", typed)))
   {
@@ -99,7 +105,10 @@ void ask_n_run_cmd(const char *str1, const char *str2)
   snprintf(exec_str, 199, "%s \"%s\"", str1, typed);
   system(exec_str);
 
-  puts(DONE);
+  if (!puts(DONE))
+  {
+    EXIT_BAD();
+  }
   return;
 }
 
@@ -113,7 +122,10 @@ void ask_zero_or_one(const char *str1, const char *str2)
   int enter_status = -1, entered_val = -1;
 
   SYSTEM_TDCTL();
-  puts(str2);
+  if (!puts(str2))
+  {
+    EXIT_BAD();
+  }
 
   while (1 != (enter_status = (scanf("%d", &entered_val))) ||
     (entered_val < 0 || entered_val > 1))
@@ -126,11 +138,17 @@ void ask_zero_or_one(const char *str1, const char *str2)
       }
     }
     SYSTEM_TDCTL();
-    puts(str2);
+    if (!puts(str2))
+    {
+      EXIT_BAD();
+    }
   }
   snprintf(exec_str, 39, "%s %d", str1, entered_val);
   system(exec_str);
 
-  puts(DONE);
+  if (!puts(DONE))
+  {
+    EXIT_BAD();
+  }
   return;
 }
