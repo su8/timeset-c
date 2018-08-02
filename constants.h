@@ -31,12 +31,10 @@
 
 /* misc */
 #define STREQ(STR1, STR2) (0 == (strcmp(STR1, STR2)))
-#define MENU_ROW(NUM, OPT) BLUE "[" YELLOW NUM BLUE "]" NORM "  " OPT "\n"
+#define MENU_ROW(NUM, OPT) BLUE "[" NORM NUM BLUE "]" NORM " " OPT "\n"
 #define EXIT_BAD() \
   puts("Something went wrong, exiting !!!"); \
   exit(EXIT_FAILURE);
-
-#define EQSIGNS "============================================================="
 
 /* runtime strings */
 #define PLEASE_ENTER "Please enter a value between 0 and 1:\n0 means"
@@ -48,20 +46,20 @@
 #define DONE "Done."
 
 /* draw_menu strings */
-#define PROGRAM_TITLE "TimeSet(tings) - Configure the System Date and Time"
-#define MENU_OPT1 "Show Current Date and Time Configurations"
-#define MENU_OPT2 "Show Known Timezones"
-#define MENU_OPT3 "Set System Timezone"
-#define MENU_OPT4 "Synchronize Time from the Network (NTP)"
-#define MENU_OPT5 "Control whether NTP is used for system time or not"
-#define MENU_OPT6 "Enable NTP at Startup"
-#define MENU_OPT7 "Disable NTP at Startup"
-#define MENU_OPT8 "Control whether Hardware Clock is in Local Time or not"
-#define MENU_OPT9 "Read the time from the Hardware Clock"
+#define PROGRAM_TITLE "TimeSet: Manage System Date and Time"
+#define MENU_OPT1 " Show Current Date and Time Configurations"
+#define MENU_OPT2 " Show Known Timezones"
+#define MENU_OPT3 " Set System Timezone"
+#define MENU_OPT4 " Synchronize Time from the Network (NTP)"
+#define MENU_OPT5 " Control whether NTP is used for system time or not"
+#define MENU_OPT6 " Enable NTP at Startup"
+#define MENU_OPT7 " Disable NTP at Startup"
+#define MENU_OPT8 " Control whether Hardware Clock is in Local Time or not"
+#define MENU_OPT9 " Read the time from the Hardware Clock"
 #define MENU_OPT10 "Synchronize Hardware Clock from the System Time"
 #define MENU_OPT11 "Synchronize System Time from the Hardware Clock"
 #define MENU_OPT12 "Set System Time manually"
-#define MENU_OPT0 "Exit/Quit"
+#define MENU_OPT0 " Exit"
 
 /* commands to execute */
 #define CMD1 "timedatectl status"

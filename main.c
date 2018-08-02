@@ -54,12 +54,12 @@ int main(int argc, char *argv[])
   int return_val = -1;
   struct argp arg_parser = {
     .doc = doc,
-    .options = options, 
+    .options = options,
     .parser = parse_opt
   };
   argp_parse(&arg_parser, argc, argv, 0, NULL, NULL);
 
-  /* 
+  /*
      Do not continue if the user has
      used the command line options
   */
@@ -102,7 +102,6 @@ int main(int argc, char *argv[])
         }
         break;
       default:
-        printf("%s\n%s%s\n\n", RED, "Please choose a option between 0-12.", NORM);
         break;
     }
   }
