@@ -22,8 +22,8 @@
 #include <string.h>
 #include "constants.h"
 
-/* 
-   print/draw the menu and return 
+/*
+   print/draw the menu and return
    the user option choice back to main.c
 */
 int draw_menu(void)
@@ -31,7 +31,7 @@ int draw_menu(void)
   int input = -1;
   static const char draw_menu[] =
   {
-    GREEN"==="PINK"  "PROGRAM_TITLE"  "GREEN"===\n"
+    BLUE"-"NORM"!"BLUE"-  "PROGRAM_TITLE"\n"
     MENU_ROW("1",  MENU_OPT1)
     MENU_ROW("2",  MENU_OPT2)
     MENU_ROW("3",  MENU_OPT3)
@@ -45,12 +45,11 @@ int draw_menu(void)
     MENU_ROW("11", MENU_OPT11)
     MENU_ROW("12", MENU_OPT12)
     MENU_ROW("0",  MENU_OPT0)
-    GREEN""EQSIGNS"\n\n"NORM""
-    "Enter your choice:"" "
+    BLUE"-"NORM"!"BLUE"-  0-12: "NORM
   };
 
   printf("%s", draw_menu);
-  
+
   if (EOF == (scanf("%d", &input)))
   {
     EXIT_BAD();
@@ -112,7 +111,7 @@ void ask_n_run_cmd(const char *str1, const char *str2)
   return;
 }
 
-/* 
+/*
    ask the question passed to the formal parameter str2
    and restrict the user answer to 0 and 1
 */
