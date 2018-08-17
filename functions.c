@@ -49,6 +49,10 @@ int draw_menu(void)
   };
 
   printf("%s", draw_menu);
+  if (0 != (fflush(stdout)))
+  {
+    EXIT_BAD();
+  }
 
   if (EOF == (scanf("%d", &input)))
   {
